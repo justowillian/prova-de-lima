@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Previsão do Tempo ⛅</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            background-image: url(''); /* Substitua com a URL da sua imagem */
+            background-size: cover; /* A imagem cobre toda a área da tela */
+            background-position: center; /* A imagem será centralizada */
+            background-attachment: fixed; /* A imagem ficará fixa ao rolar a página */
+            color: #333;
+        }
+        header {
+            background: rgba(0, 123, 255, 0.8); /* Transparência no fundo */
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .caixa-maior {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 20px auto;
+        }
+        .input-cidade {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .botao-busca {
+            background-color: #007BFF;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .botao-busca img {
+            width: 20px;
+            height: 20px;
+        }
+        .caixa-media {
+            margin-top: 20px;
+        }
+        .cidade {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .temp {
+            font-size: 48px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        .caixa-menor {
+            margin-top: 20px;
+        }
+        .img-previsao {
+            width: 100px;
+        }
+        .texto-previsao {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .unidade {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Previsão do Tempo ⛅</h1>
+        <nav>
+            <a href="index.html">Página Inicial</a>
+            <a href="Noticias gerais.html">Notícias Gerais</a>
+            <a href="vagas de emprego.html">Vagas de Emprego</a>
+            <a href="horoscopo.html">Horóscopo</a>
+            <a href="esportes.html">Esportes</a>
+            <a href="assinar jornal.html">Assinar Jornal</a>
+        </nav>
+    </header>
+    <h1>Pesquise a Previsão do Local Que Deseja</h1>
+    <h1>Aqui 👇</h1>
+
+    <div class="caixa-maior">
+        <input class="input-cidade" id="cidade" placeholder="Digite o nome da Cidade">
+        <button class="botao-busca" onclick="cliqueiNoBotao()">
+            <img class="img-busca" alt="busca" src="https://www.svgrepo.com/show/488200/find.svg">
+        </button>
+
+        <div class="caixa-media"></div>
+        <h2 class="cidade" id="cidade-nome">Tempo em São Paulo</h2>
+        <p class="temp" id="temp">21º C</p>
+
+        <div class="caixa-menor">
+            <img class="img-previsao" id="icone-tempo" alt="icone-info-tempo" src="https://openweathermap.org/img/wn/04n.png">
+            <p class="texto-previsao" id="texto-previsao">Nublado</p>
+        </div>
+        <p class="unidade" id="umidade">Umidade: 76%</p>
+    </div>
+</body>
+</html>
